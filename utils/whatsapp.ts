@@ -24,7 +24,7 @@ export const generateWhatsAppOrderString = (items: CartItemType[]): string => {
   }
 
   text += '------------------------\n';
-  text += '⚠️ _Requiere confirmación manual_';
+  text += '⚠️ _Requiere confirmación del Vendedor';
   
   return text;
 };
