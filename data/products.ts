@@ -14,10 +14,10 @@ export const productosData: Producto[] = [
   { id: "10", marca: "Fanta", sabor: "Fanta", presentacion: "1.75L", imagen: "/fanta-original.png", unidadesPorPack: 8, precioPack: 21000, precioPallet: 2100000 },
   
   // Aguas Saborizadas - Aquarius
-  { id: "11", marca: "Aquarius", sabor: "Aquarius Naranja", presentacion: "1.5L", imagen: "/aquarius-naranja.png", unidadesPorPack: 6, precioPack: 15000, precioPallet: 1500000 },
-  { id: "12", marca: "Aquarius", sabor: "Aquarius Pomelo", presentacion: "1.5L", imagen: "/aquarius-pomelo.png", unidadesPorPack: 6, precioPack: 15000, precioPallet: 1500000 },
-  { id: "13", marca: "Aquarius", sabor: "Aquarius Pera", presentacion: "1.5L", imagen: "/aquarius-pera.png", unidadesPorPack: 6, precioPack: 15000, precioPallet: 1500000 },
-  { id: "14", marca: "Aquarius", sabor: "Aquarius Manzana", presentacion: "1.5L", imagen: "/aquarius-manzana.png", unidadesPorPack: 6, precioPack: 15000, precioPallet: 1500000 },
-  { id: "15", marca: "Aquarius", sabor: "Aquarius Uva", presentacion: "1.5L", imagen: "/aquarius-uva.png", unidadesPorPack: 6, precioPack: 15000, precioPallet: 1500000 },
-  { id: "16", marca: "Aquarius", sabor: "Aquarius Limón", presentacion: "1.5L", imagen: "/aquarius-limon.png", unidadesPorPack: 6, precioPack: 15000, precioPallet: 1500000 }
+  { id: "11", marca: "Aquarius", sabor: "Aquarius Naranja", presentacion: "1.5L", imagen: "/aquarius-naranja.png", unidadesPorPack: 6, precioPack: 12700, precioPallet: 1500000 },
+  { id: "12", marca: "Aquarius", sabor: "Aquarius Pomelo", presentacion: "1.5L", imagen: "/aquarius-pomelo.png", unidadesPorPack: 6, precioPack: 12700, precioPallet: 1500000 },
+  { id: "13", marca: "Aquarius", sabor: "Aquarius Pera", presentacion: "1.5L", imagen: "/aquarius-pera.png", unidadesPorPack: 6, precioPack: 12700, precioPallet: 1500000 },
+  { id: "14", marca: "Aquarius", sabor: "Aquarius Manzana", presentacion: "1.5L", imagen: "/aquarius-manzana.png", unidadesPorPack: 6, precioPack: 12700, precioPallet: 1500000 },
+  { id: "15", marca: "Aquarius", sabor: "Aquarius Uva", presentacion: "1.5L", imagen: "/aquarius-uva.png", unidadesPorPack: 6, precioPack: 12700, precioPallet: 1500000 },
+  { id: "16", marca: "Aquarius", sabor: "Aquarius Limón", presentacion: "1.5L", imagen: "/aquarius-limon.png", unidadesPorPack: 6, precioPack: 12700, precioPallet: 1500000 }
 ];
