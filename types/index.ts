@@ -1,5 +1,17 @@
-export type Sabor = 'Coca' | 'Coca Zero' | 'Sprite' | 'Sprite Zero' | 'Fanta';
-export type Presentacion = '600ml' | '1.75L';
+export type Sabor = 
+  | 'Coca' 
+  | 'Coca Zero' 
+  | 'Sprite' 
+  | 'Sprite Zero' 
+  | 'Fanta'
+  | 'Aquarius Naranja'
+  | 'Aquarius Pomelo'
+  | 'Aquarius Pera'
+  | 'Aquarius Manzana'
+  | 'Aquarius Uva'
+  | 'Aquarius Limón';
+
+export type Presentacion = '600ml' | '1.5L' | '1.75L';
 export type TipoCompra = 'Pack' | 'Pallet';
 
 export interface Producto {
@@ -7,7 +19,7 @@ export interface Producto {
   marca: string;
   sabor: Sabor;
   presentacion: Presentacion;
-  imagen: string; // <-- Nueva propiedad
+  imagen: string; 
   unidadesPorPack: number;
   precioPack: number;
   precioPallet: number;
