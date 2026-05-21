@@ -90,7 +90,7 @@ export default function CartItem({ item }: { item: CartItemType }) {
           </span>
         </div>
 
-        {/* Botón de Eliminar */}
+     
         <button
           onClick={() => removeItem(item.id, item.tipoCompra)}
           className="w-full md:w-auto h-12 md:h-14 px-4 flex items-center justify-center text-neutral-400 hover:text-red-400 bg-neutral-800/50 md:bg-transparent hover:bg-red-950/30 rounded-xl transition-colors shrink-0 group self-end sm:self-auto cursor-pointer"
