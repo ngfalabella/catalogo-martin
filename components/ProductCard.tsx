@@ -7,9 +7,10 @@ import { useCart } from '@/context/CartContext';
 
 interface Props {
   producto: Producto;
+  priority?: boolean; // Agregamos esta propiedad opcional
 }
 
-export default function ProductCard({ producto }: Props) {
+export default function ProductCard({ producto, priority = false }: Props) {
   const { cart, addItem, updateQuantity } = useCart();
   const [imgError, setImgError] = useState(false);
   
@@ -53,13 +54,14 @@ export default function ProductCard({ producto }: Props) {
           <div className="text-neutral-400 text-sm font-bold">Sin imagen</div>
         ) : (
           <Image 
-            src={producto.imagen} 
-            alt={`${producto.sabor} ${producto.presentacion}`}
-            fill
-            className="object-contain"
-            sizes="(max-width: 768px) 100vw, 50vw"
-            onError={() => setImgError(true)}
-          />
+          src={producto.imagen} 
+          alt={`${producto.sabor} ${producto.presentacion}`}
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          priority={priority} // Se lo pasamos al componente de Next.js
+          onError={() => setImgError(true)}
+        />
         )}
       </div>
 

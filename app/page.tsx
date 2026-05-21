@@ -1,15 +1,18 @@
-import { productosData } from '@/data/products';
+import { getProductos } from '@/utils/products';
 import ProductCard from '@/components/ProductCard';
 
-export default function Home() {
-  // Filtramos los productos por su presentación
+export default async function Home() {
+  // Consumimos los datos directamente desde Google Sheets de forma dinámica
+  const productosData = await getProductos();
+
+  // Separamos por tamaño igual que antes
   const productos175 = productosData.filter(p => p.presentacion === '1.75L');
   const productos150 = productosData.filter(p => p.presentacion === '1.5L');
   const productos600 = productosData.filter(p => p.presentacion === '600ml');
 
   return (
     <div className="max-w-5xl mx-auto space-y-12 pb-12">
-      
+
       <header className="mb-8">
         <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-white">
           Catálogo de Productos
@@ -29,10 +32,14 @@ export default function Home() {
             Familiar
           </span>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {productos175.map((producto) => (
-            <ProductCard key={producto.id} producto={producto} />
+          {productos175.map((producto, index) => (
+            <ProductCard
+              key={producto.id}
+              producto={producto}
+              priority={index < 6} // Los primeros 2 elementos tendrán carga inmediata
+            />
           ))}
         </div>
       </section>
@@ -47,7 +54,7 @@ export default function Home() {
             Saborizadas
           </span>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {productos150.map((producto) => (
             <ProductCard key={producto.id} producto={producto} />
@@ -65,7 +72,7 @@ export default function Home() {
             Individual
           </span>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {productos600.map((producto) => (
             <ProductCard key={producto.id} producto={producto} />
